@@ -1,0 +1,69 @@
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-left: -50px;
+    padding: 20px;
+  }
+
+  
+  </style>
+  
+<div class="container">
+
+    <h1 style="margin-top: 25px;">
+    Ajouter utilisateur
+    </h1>
+  
+  
+    <div class="row" style="margin-top: 25px;">
+    <div class="form-group col-12">
+        <input type="file" (change)="onFileSelected($event)" [(ngModel)]="UserImage"/>
+       </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="UserName" placeholder="Nom">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="UserEmail" placeholder="Email">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="UserAddress" placeholder="Adresse">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="UserGender" placeholder="Genre">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="UserNumber" placeholder="Numéro téléphone">
+      </div>
+      <div class="col-md-3">
+        <button type="button" (click)="CreateUser()" class="btn btn-primary">+
+          Create Student</button>
+      </div>
+    </div>
+
+    
